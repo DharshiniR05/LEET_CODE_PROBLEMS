@@ -1,0 +1,14 @@
+class Solution(object):
+    def rotate(self, nums, k):
+        n = len(nums)
+        k = k % n
+
+        # Reverse the entire array
+        nums.reverse()
+
+        # Reverse first k elements
+        nums[:k] = reversed(nums[:k])
+
+        # Reverse remaining elements
+        nums[k:] = reversed(nums[k:])
+        
